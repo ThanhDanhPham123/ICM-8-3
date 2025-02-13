@@ -1,0 +1,45 @@
+body{
+    background-image:url(Background_main.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+img{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left:517px;
+    top:125px;
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+a:link, a:visited {
+    background-color: #ff7ee3;
+    color: rgb(46, 0, 46);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    left: 730px ;
+    top:370px ;
+  }
+  
+  a:hover, a:active {
+    background-color: #f56bd7;
+  }
+@keyframes shake{
+    0%{
+        transform: rotate(0deg);
+    }
+    6.25%{
+        transform: rotate(-10deg);
+    }
+    12.5%{
+        transform: rotate(10deg);
+    }
+    25%, 100%{
+        transform: rotate(0deg);
+    }
+}
