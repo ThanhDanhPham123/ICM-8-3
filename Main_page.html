@@ -8,6 +8,26 @@
     </head>
     <body>        
         <img id= "heart" src="Heart2.png">
-        <a href="Picture_page.html">Open</a>
+        <nav>
+            <input type="checkbox" id="heart-burst">
+            <label for="heart-burst">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="heart-icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                  </svg>
+            </label>
+            <a href="Picture_page.html" class="enter" onclick="loadPage(event)">Open</a>
+            <div class="filler"></div>
+        </nav>
+        <script>
+            function loadPage(event) {
+                event.preventDefault(); // Prevents immediate navigation
+                document.body.style.opacity = "0"; // Starts fade-out animation
+    
+                setTimeout(() => {
+                    window.location.href = "Picture_page.html"; // Navigate after transition
+                }, 50); // Delay must match CSS transition time
+            }
+        </script>
+    
     </body>
 </hmtl>

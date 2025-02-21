@@ -14,18 +14,65 @@ img{
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 a:link, a:visited {
     background-color: #ff7ee3;
     color: rgb(46, 0, 46);
-    padding: 14px 25px;
+    padding: 7px 12px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    position: absolute;
-    left: 730px ;
-    top:370px ;
+    display:block;
+    display: none;
+    position: static;
+    top:0px;
+    left:0px;
+    border-radius: 30%;
   }
-  
+.heart-icon{
+    fill: #fdc8dc;
+}
+nav{
+    position: absolute;
+    top:390px;
+    left:765px;
+}
+input{
+    display: none;
+}
+.filler{
+    position: absolute;
+    top:0px;
+    left:5px;
+    height: 10px;
+    width: 10px;
+    background-color: #fdc8dc;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: -1;
+}
+@keyframes spread{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(27);
+    }
+}
+#heart-burst:checked ~ .filler{
+    animation-name: spread;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#heart-burst:checked ~ .enter{
+    display: flex;
+    transform: scale(1.5);
+}
   a:hover, a:active {
     background-color: #f56bd7;
   }
